@@ -1,0 +1,11 @@
+unclassified:
+  githubpluginconfig:
+    configs:
+      - name: "GitHUB demo1"
+        apiUrl: "https://github.domain.local/api/v3"
+        credentialsId: "credential-github-xiaojias"
+        manageHooks: true
+      - name: "GitHUB demo2"
+        apiUrl: "https://github.domain.local/api/v3"
+        credentialsId: "credential-github-xiaojias"
+        manageHooks: true

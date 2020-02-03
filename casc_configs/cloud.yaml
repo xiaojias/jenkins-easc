@@ -1,0 +1,60 @@
+jenkins:
+  clouds:
+    - kubernetes:
+        name: k8s-local
+        serverUrl: "https://kubernetes.default.svc.cluster.local:443"
+        skipTlsVerify: true
+        namespace: "jenkins"
+        jenkinsUrl: "http://jenkins-master.jenkins:8080"
+        containerCapStr: 100
+        templates:
+          - name: jenkins-slave-maven
+            namespace: "jenkins"
+            label: maven
+            containers:
+              - name: maven
+                image: maven:3.3.9-jdk-8-alpine
+                ttyEnabled: true
+                command: cat
+                args: ""
+                resourceRequestCpu: "100m"
+                resourceLimitCpu: "500m"
+                resourceRequestMemory: "100Mi"
+                resourceLimitMemory: "500Mi"
+            idleMinutes: "1"
+            activeDeadlineSeconds: "120"
+            slaveConnectTimeout: "1000"
+          - name: "jenkins-slave-linux"
+            namespace: "jenkins"
+            label: "linux-x86_64"
+            nodeUsageMode: EXCLUSIVE
+            containers:
+              - name: "jnlp"
+                image: "jenkinsci/jnlp-slave:latest"
+                alwaysPullImage: true
+                workingDir: "/home/jenkins"
+                ttyEnabled: true
+                resourceRequestCpu: "100m"
+                resourceLimitCpu: "500m"
+                resourceRequestMemory: "100Mi"
+                resourceLimitMemory: "500Mi"
+            volumes:
+              - emptyDirVolume:
+                  memory: false
+                  mountPath: "/tmp"
+            idleMinutes: "6"
+            activeDeadlineSeconds: "120"
+            slaveConnectTimeout: "1000"
+jobs:
+    - script: >
+        pipelineJob('k8s-local-verify') {
+            definition {
+                cps {
+                    script("""
+                    node('linux-x86_64') {
+                        sh "hostname"
+                    }
+                    """.stripIndent())
+                }
+            }
+        } 
