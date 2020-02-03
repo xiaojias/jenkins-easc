@@ -20,6 +20,7 @@ kubectl apply -f master/jenkins-rbac.yaml
 kubectl apply -f master/deployment.yaml
 kubectl apply -f master/service.yaml
 
+# Optional
 kubectl apply -f ingress/ingress.yaml
 kubectl apply -f ingress/apple.yaml
 
