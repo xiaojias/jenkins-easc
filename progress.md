@@ -35,10 +35,10 @@ nginx-ingress-controller   1/1     1            1           26d
 ```bash
 # ./deploy.sh
 ```
-If everything is working, instance will be setup in 'jenkins' namespace.
 
-2. Export service by either way below:
+2. Export service by either way below:   
 If your ingress controller is working:
+Update value for 'basic-auth-secret' in ingress/ingress.yaml, and then perform command:
 ```bash
 # kubectl apply -f ingress/ingress.yaml
 ```
@@ -47,7 +47,22 @@ otherwise:
 kubectl apply -f master/service-nodeport.yaml
 ```
 
-3. Access
+3. Access Jenkins UI
+Dashboard will look like below:
+![Jenkins Dashboard](./images/jenkins-casc-01.png)
+
+4. Apply further configuration
+
+```bash
+# load-file-as-code.sh ./casc_configs/
+
+```
+5. Login Jenkins UI to apply new configurations
+Login Jenkins UI, open "Manage Jenkins", select "Congifuration as Code", and then click "Apply new Configuration" button.
+Dashboard of Jenkins UI will becomes below:
+![Jenkins Dashboard](./images/jenkins-casc-02.png)
+
+**Success.**
 
 ## Phase 2 (TBD)
 **Goals:**
