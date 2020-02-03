@@ -54,7 +54,7 @@ Dashboard will look like below:
 4. Apply further configuration
 
 ```bash
-# load-file-as-code.sh ./casc_configs/
+# ./load-file-as-code.sh ./casc_configs/
 
 ```
 5. Login Jenkins UI to apply new configurations
