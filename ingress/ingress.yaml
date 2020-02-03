@@ -1,0 +1,37 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    app: jenkins-master
+    version: latest
+    group: jenkins
+  namespace: jenkins
+  name: jenkins-ingress
+  annotations:
+#    nginx.ingress.kubernetes.io/auth-type: basic
+#    nginx.ingress.kubernetes.io/auth-secret: basic-auth
+#    nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required - user'
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: 'Host for Jenkins ingress'
+    http:
+      paths:
+        - path: /apple
+          backend:
+            serviceName: apple-service
+            servicePort: 5678
+        - path: /
+          backend:
+            serviceName: jenkins-master
+            servicePort: 8080
+---
+apiVersion: v1
+data:
+  basic-auth-secret: 'secret-for-jenkins-ui'
+kind: Secret
+metadata:
+  name: basic-auth
+  namespace: jenkins
+type: Opaque
+  
