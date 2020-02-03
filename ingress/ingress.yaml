@@ -14,7 +14,7 @@ metadata:
     ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: 'Host for Jenkins ingress'
+  - host: 'jenkins.xiaojias.com'
     http:
       paths:
         - path: /apple
