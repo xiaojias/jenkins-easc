@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jenkins-configuration-as-code
+  namespace: jenkins
+data:
+  jenkins.yaml: |
+    jenkins:
+      systemMessage: "Automatically config Jenkins by Jenkins Configuration as Code plugin\n\n"
+      numExecutors: 5
+      scmCheckoutRetryCount: 2
+      mode: NORMAL
