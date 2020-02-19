@@ -1,5 +1,5 @@
 # Profile for busybox Pod
-# Can create a busybox Pod yaml file based on pod-sample.yaml
+# Can create a busybox Pod yaml file based on pod-template.yaml
 
 metadata:
   name: busybox-sample
