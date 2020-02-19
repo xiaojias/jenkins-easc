@@ -1,18 +1,12 @@
+# Define a simple Pod template
 apiVersion: v1
 kind: Pod
 metadata:
   name: pod-sample
-  namespace: jenkins
 spec:
-  hostname: pod-sample
-  subdomain: xiaojias
   containers:
-  - name: pod-sample
-    image: pod-sample:latest
-    command:
-      - sleep
-      - "3600"
+  - name: container0
+    image: busybox:latest
     imagePullPolicy: IfNotPresent
   restartPolicy: Always
-
 ---
