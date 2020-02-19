@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: busybox-sample
+  name: pod-sample
   namespace: jenkins
 spec:
-  hostname: busybox-sample
+  hostname: pod-sample
   subdomain: xiaojias
   containers:
-  - name: busybox
-    image: busybox:latest
+  - name: pod-sample
+    image: pod-sample:latest
     command:
       - sleep
       - "3600"
