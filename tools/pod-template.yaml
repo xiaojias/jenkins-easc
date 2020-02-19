@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
   - name: container0
-    image: busybox:latest
+    image: busybox
     imagePullPolicy: IfNotPresent
   restartPolicy: Always
 ---
