@@ -1,0 +1,12 @@
+# Define a simple Pod template
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-template
+spec:
+  containers:
+  - name: container0
+    image: busybox
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+---
