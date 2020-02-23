@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    app: jenkins-master
+    version: "latest"
+    group: "jenkins"
+  name: jenkins-admin
+  namespace: jenkins
+
+
