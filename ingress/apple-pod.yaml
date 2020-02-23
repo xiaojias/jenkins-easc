@@ -11,14 +11,3 @@ spec:
       image: hashicorp/http-echo
       args:
         - "-text=apple-in-jenkins-ns"
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: apple-service
-  namespace: jenkins
-spec:
-  selector:
-    app: apple
-  ports:
-    - port: 5678 # Default port for image
