@@ -25,5 +25,5 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: jenkins-admin
-  namespace: test
+  namespace: jenkins
 
