@@ -6,7 +6,7 @@ pipelineJob('Inital-JCasC/job-dsl-plugin') {
         git {
           remote {
             url('git@github.com:xiaojias/devops-cicd.git')
-            credential('credential-github-xiaojias')
+            credentials('credential-github-xiaojias')
           }
           branch('*/wip')
           script('app01.Jenkinsfile')
