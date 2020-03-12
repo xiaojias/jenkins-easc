@@ -1,13 +1,12 @@
 listView('job-dsl-plugin') {
-description('All new jobs for Job DSL')
-filterBuildQueue()
-filterExecutors()
-jobs {
-    name('job-dsl-plugin-app01') 
-    name('job-dsl-plugin-app02') 
-
-}
-    columns {
+  description('All new jobs for Job DSL')
+  filterBuildQueue()
+  filterExecutors()
+  jobs {
+      name('job-dsl-plugin-app01') 
+      name('job-dsl-plugin-app02') 
+    }
+  columns {
     status()
     weather()
     name()
@@ -15,6 +14,7 @@ jobs {
     lastFailure()
     lastDuration()
     buildButton()
+  }
 }
 
 pipelineJob('job-dsl-plugin-app01') {
