@@ -1,5 +1,5 @@
 folder('Inital-JCasC')
-pipelineJob('Inital-JCasC/job-dsl-plugin') {
+pipelineJob('Inital-JCasC/job-dsl-plugin-app01') {
   definition {
     cpsScm {
       scm {
@@ -10,6 +10,23 @@ pipelineJob('Inital-JCasC/job-dsl-plugin') {
           }
           branch('*/wip')
           scriptPath('app01.Jenkinsfile')
+        }
+      }
+      lightweight()
+    }
+  }
+}
+pipelineJob('Inital-JCasC/job-dsl-plugin-app02') {
+  definition {
+    cpsScm {
+      scm {
+        git {
+          remote {
+            url('git@github.com:xiaojias/devops-cicd.git')
+            credentials('credential-github-xiaojias')
+          }
+          branch('*/wip')
+          scriptPath('app02.Jenkinsfile')
         }
       }
       lightweight()
