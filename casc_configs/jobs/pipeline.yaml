@@ -1,5 +1,5 @@
 folder('Inital-JCasC')
-pipelineJob('/Inital-JCasC/job-dsl-plugin') {
+pipelineJob('Inital-JCasC/job-dsl-plugin') {
   definition {
     cpsScm {
       scm {
