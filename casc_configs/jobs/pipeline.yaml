@@ -9,7 +9,7 @@ pipelineJob('Inital-JCasC/job-dsl-plugin') {
             credentials('credential-github-xiaojias')
           }
           branch('*/wip')
-          GitContext.script('app01.Jenkinsfile')
+          # GitContext.script('app01.Jenkinsfile')
         }
       }
       lightweight()
