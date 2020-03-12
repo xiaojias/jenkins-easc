@@ -5,9 +5,11 @@ pipelineJob('Inital-JCasC/job-dsl-plugin') {
       scm {
         git {
           remote {
-            url('https://github.com/xiaojias/jenkins-casc.git')
+            url('git@github.com:xiaojias/devops-cicd.git')
+            credential('credential-github-xiaojias')
           }
           branch('*/wip')
+          script('app01.Jenkinsfile')
         }
       }
       lightweight()
