@@ -1,24 +1,17 @@
-jobs:
-  - script: >
-      folder('Initial-Jobs')
-      view('Inital-CasC')
-  - script: >
-      pipelineJob('Initial-Jobs/default-agent') {
-        definition {
-          cps {
-            script("""\
-              pipeline {
-                agent any
-                stages {
-                  stage ('test') {
-                    steps {
-                      echo "hello"
-                    }
-                  }
-                }
-              }""".stripIndent())
+folder('Inital-JCasC')
+pipelineJob('/Inital-JCasC/job-dsl-plugin') {
+  definition {
+    cpsScm {
+      scm {
+        git {
+          remote {
+            url('https://github.com/xiaojias/jenkins-casc.git')
           }
+          branch('*/wip')
         }
       }
-  # - script: >
+      lightweight()
+    }
+  }
+}
 
