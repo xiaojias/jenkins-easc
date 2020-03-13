@@ -1,10 +1,10 @@
-listView('job-dsl-plugin') {
+listView('job-dsl-plugin-dsl') {
   description('All new jobs for Job DSL')
   filterBuildQueue()
   filterExecutors()
   jobs {
-      name('job-dsl-plugin-app01') 
-      name('job-dsl-plugin-app02') 
+      name('job-dsl-plugin-app01-dsl') 
+      name('job-dsl-plugin-app02-dsl') 
     }
   columns {
     status()
@@ -17,7 +17,7 @@ listView('job-dsl-plugin') {
   }
 }
 
-pipelineJob('job-dsl-plugin-app01') {
+pipelineJob('job-dsl-plugin-app01-dsl') {
   definition {
     cpsScm {
       scm {
@@ -34,7 +34,7 @@ pipelineJob('job-dsl-plugin-app01') {
     }
   }
 }
-pipelineJob('job-dsl-plugin-app02') {
+pipelineJob('job-dsl-plugin-app02-dsl') {
   definition {
     cpsScm {
       scm {

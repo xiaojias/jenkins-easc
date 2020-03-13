@@ -19,3 +19,59 @@ jobs:
           }
         }
       }
+
+  - script: >
+      pipelineJob('job-dsl-plugin-app01') {
+        definition {
+          cpsScm {
+            scm {
+              git {
+                remote {
+                  url('git@github.com:xiaojias/devops-cicd.git')
+                  credentials('credential-github-xiaojias')
+                }
+                branch('*/wip')
+                scriptPath('app01.Jenkinsfile')
+              }
+            }
+            lightweight()
+          }
+        }
+      }
+  - script: >
+      pipelineJob('job-dsl-plugin-app02') {
+        definition {
+          cpsScm {
+            scm {
+              git {
+                remote {
+                  url('git@github.com:xiaojias/devops-cicd.git')
+                  credentials('credential-github-xiaojias')
+                }
+                branch('*/wip')
+                scriptPath('app02.Jenkinsfile')
+              }
+            }
+            lightweight()
+          }
+        }
+      }
+  - script: >
+      listView('job-dsl-plugin') {
+        description('All new jobs for Job DSL')
+        filterBuildQueue()
+        filterExecutors()
+        jobs {
+            name('job-dsl-plugin-app01') 
+            name('job-dsl-plugin-app02') 
+          }
+        columns {
+          status()
+          weather()
+          name()
+          lastSuccess()
+          lastFailure()
+          lastDuration()
+          buildButton()
+        }
+      }
