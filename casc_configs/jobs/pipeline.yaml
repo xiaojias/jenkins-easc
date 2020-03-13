@@ -3,7 +3,8 @@ listView('job-dsl-plugin-dsl') {
   filterBuildQueue()
   filterExecutors()
   jobs {
-      regex(job-dsl-plugin.*) 
+      regex(/job-dsl-plugin.+/)
+      name('example') 
     }
   columns {
     status()
