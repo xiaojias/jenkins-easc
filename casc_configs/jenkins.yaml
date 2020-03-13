@@ -6,4 +6,6 @@ jenkins:
   views:
   - all:
       name: 'all'
+  - job-dsl:
+      name: 'job-dsl'
 
