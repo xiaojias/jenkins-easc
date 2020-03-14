@@ -9,7 +9,7 @@ jobs:
             id('12312313') // IMPORTANT: use a constant and unique identifier
             scanCredentialsId('credential-github-xiaojias')
             repoOwner('xiaojias')
-            repository('jenkins-jcasc')
+            repository('test-cicd')
           }
         }
         orphanedItemStrategy {

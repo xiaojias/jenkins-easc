@@ -28,7 +28,8 @@ RUN /usr/local/bin/install-plugins.sh \
   git-changelog \
   configuration-as-code \
   configuration-as-code-support \
-  violation-comments-to-gitlab
+  violation-comments-to-gitlab \
+  next-build-number
 
 VOLUME /var/jenkins_home
 

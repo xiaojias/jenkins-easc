@@ -1,0 +1,3 @@
+# To access Jenkins server with command
+kubectl -n jenkins exec -it $(kubectl -n jenkins get pods | grep "^jenkins-master" | awk '{ print $1 }') /bin/sh
+

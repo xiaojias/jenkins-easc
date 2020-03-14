@@ -27,7 +27,7 @@ nginx-ingress-controller   1/1     1            1           26d
 - Setup Jenkins instance;
 - Create initial jobs;
 - Manage the configurations in github;
-- Can apply further configurations; 
+- Apply further configurations for instance; 
 - The instance can be re-built relies on the configurations.
 
 **Steps:**
@@ -64,9 +64,17 @@ Dashboard of Jenkins UI will becomes below:
 
 **Success.**
 
-## Phase 2 (TBD)
+## Phase 2
 **Goals:**
+- Automate all the actions in Phase 1 (> 95%);
+- Create Tekton pipeline for the deployment;
 
+**Success.**
+
+## Phase 3 (on going)
+**Goals**
+- Create Jobs based on human-readable declative codes;
+- Automate the process and apply it into Gitops;
 
 
 

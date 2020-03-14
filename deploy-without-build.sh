@@ -1,11 +1,5 @@
 #!/bin/sh
 
-# Re-Build image if necessary
-cd master
-./re-build-jenkins-image.sh
-
-cd ..
-
 # Deploy Jenkins
 kubectl create namespace jenkins
 
