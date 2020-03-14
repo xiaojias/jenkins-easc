@@ -1,7 +1,19 @@
-# jenkins-jcasc
-The goal is to easily setup and manage Jenkins instance in Kubernetes cluster and automate the process.
+# Makes Jenkins Everything As Code
+## Goals
+- Setup Jenkins instance on Kubertenes cluster;
+- Apply basic Instance configuration, jobs, pipelines and enhancement;
+- Isolate the human-readable configuration files and installation process/scripts;
+- Manage configuration, process and everything as code on github;
+- Automate the processes and apply them via Continuous Delivery tool/s (e.g Tekton pipeline, etc);
+- (TBD)
 
-Adopt tools are:
-- Jenkins Configuration as Code plugin;
-- (to be updated)
+
+## Test Environment
+- Kubernetes cluster hosted on 1-node;
+- Tekton pipeline installed;
+- (TBD)
+
+## Workouts
+- Easily setup Jenkins instance with initial configurations and enhancement;
+- Automate the deployment and apply it via Tekton pipeline;
 
