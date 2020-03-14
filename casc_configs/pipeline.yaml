@@ -21,7 +21,7 @@ jobs:
       }
 
   - script: >
-      pipelineJob('job-dsl-plugin-app01') {
+      pipelineJob('Initial-Jobs/job-dsl-plugin-app01') {
         definition {
           cpsScm {
             scm {
@@ -39,7 +39,7 @@ jobs:
         }
       }
   - script: >
-      pipelineJob('job-dsl-plugin-app02') {
+      pipelineJob('Initial-Jobs/job-dsl-plugin-app02') {
         definition {
           cpsScm {
             scm {
@@ -56,22 +56,22 @@ jobs:
           }
         }
       }
-  - script: >
-      listView('job-dsl-plugin') {
-        description('All new jobs for Job DSL')
-        filterBuildQueue()
-        filterExecutors()
-        jobs {
-            name('job-dsl-plugin-app01') 
-            name('job-dsl-plugin-app02') 
-          }
-        columns {
-          status()
-          weather()
-          name()
-          lastSuccess()
-          lastFailure()
-          lastDuration()
-          buildButton()
-        }
-      }
+  # - script: >
+  #     listView('job-dsl-plugin') {
+  #       description('All new jobs for Job DSL')
+  #       filterBuildQueue()
+  #       filterExecutors()
+  #       jobs {
+  #           name('job-dsl-plugin-app01') 
+  #           name('job-dsl-plugin-app02') 
+  #         }
+  #       columns {
+  #         status()
+  #         weather()
+  #         name()
+  #         lastSuccess()
+  #         lastFailure()
+  #         lastDuration()
+  #         buildButton()
+  #       }
+  #     }
