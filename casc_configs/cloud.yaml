@@ -46,15 +46,15 @@ jenkins:
             activeDeadlineSeconds: "120"
             slaveConnectTimeout: "1000"
 jobs:
-    - script: >
-        pipelineJob('k8s-local-verify') {
-            definition {
-                cps {
-                    script("""
-                    node('linux-x86_64') {
-                        sh "hostname"
-                    }
-                    """.stripIndent())
-                }
-            }
-        } 
+  - script: >
+      pipelineJob('k8s-local-verify') {
+          definition {
+              cps {
+                  script("""
+                  node('linux-x86_64') {
+                      sh "hostname"
+                  }
+                  """.stripIndent())
+              }
+          }
+      }
