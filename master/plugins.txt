@@ -146,7 +146,6 @@ sonar
 splunk-devops-extend
 splunk-devops
 ssh-credentials
-ssh-slaves
 stash-pullrequest-builder
 stashNotifier
 statistics-gatherer

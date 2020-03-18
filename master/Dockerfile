@@ -1,4 +1,4 @@
-FROM jenkins
+FROM jenkins/jenkins:lts
 
 # # Distributed Builds plugins
 # RUN /usr/local/bin/install-plugins.sh ssh-slaves
@@ -12,8 +12,8 @@ FROM jenkins
 # RUN /usr/local/bin/install-plugins.sh simple-theme-plugin
 # # Scaling
 
-COPY plugins.txt /usr/share/jenkins/plugins.txt
-RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/plugins.txt
+COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 # Add for Configuration as Code plugin
 # configMap of 'jenkins-configuration-as-code' is required to be create
