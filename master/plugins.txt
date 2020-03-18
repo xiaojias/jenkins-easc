@@ -71,7 +71,6 @@ hidden-parameter:0.0.4
 hp-application-automation-tools-plugin:5.4
 htmlpublisher:1.11
 http_request:1.8.12
-hygieia-publisher:1.4-SNAPSHOT (private-02/14/2017 16:47-alanydzhu)
 ibm-ucdeploy-build-steps:2.13.1019952
 ibm-ucdeploy-publisher:1.6.898775
 icon-shim:2.0.3
