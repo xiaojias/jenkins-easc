@@ -1,11 +1,12 @@
-# Makes Jenkins Everything as Code
+# Make Jenkins Everything as Code
 
 ## Goals
 
 - Setup Jenkins instance on Kubertenes cluster;
 - Apply basic Instance configuration, jobs, pipelines and enhancement;
 - Isolate the human-readable configuration files and installation process/scripts;
-- Manage configuration, process and everything as code on github;
+- Customize instance configuration, job, pipeline, plugins(to **Everything** ideally) as Code based on Templates;
+- Manage the Codes on github;
 - Automate the processes and apply them via Continuous Delivery tool/s (e.g Tekton pipeline, etc);
 - (TBC)
 
