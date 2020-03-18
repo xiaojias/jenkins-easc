@@ -13,7 +13,7 @@ FROM jenkins
 # # Scaling
 
 COPY plugins.txt /usr/share/jenkins/plugins.txt
-RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/plugins.txt
 
 # Add for Configuration as Code plugin
 # configMap of 'jenkins-configuration-as-code' is required to be create
