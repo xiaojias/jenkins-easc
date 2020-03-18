@@ -71,8 +71,8 @@ hidden-parameter:0.0.4
 hp-application-automation-tools-plugin:5.4
 htmlpublisher:1.11
 http_request:1.8.12
-ibm-ucdeploy-build-steps:2.13.1019952
-ibm-ucdeploy-publisher:1.6.898775
+ibm-ucdeploy-build-steps
+ibm-ucdeploy-publisher
 icon-shim:2.0.3
 ivy:1.26
 jacoco:2.1.0
