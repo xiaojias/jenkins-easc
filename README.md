@@ -17,6 +17,7 @@
 
 ## Workouts
 
-- Easily setup Jenkins instance with initial configurations and enhancement;
+- Easily setup Jenkins instance with initial configurations and enhancement; ![Deployed Instance](./images/jenkins-easc-02.PNG)
 - Automate the deployment and apply it via Tekton pipeline;
+- Clicking **ONE-Button** to customize your instance; ![ONE-Button to customize instance](./images/jenkins-easc-tekton-image.PNG)
 - Clicking **ONE-Button** can rebuild your Jenkins environment with configurations; ![ONE-Button to deploy](./images/jenkins-easc-tekton.PNG)
