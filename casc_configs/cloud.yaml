@@ -2,7 +2,9 @@ jenkins:
   clouds:
     - kubernetes:
         name: k8s-local
+        
         serverUrl: "https://kubernetes.default.svc.cluster.local:443"
+        
         skipTlsVerify: true
         namespace: "jenkins"
         jenkinsUrl: "http://jenkins-master.jenkins:8080"

@@ -1,19 +1,22 @@
-# Makes Jenkins Everything As Code
+# Makes Jenkins Everything as Code
+
 ## Goals
+
 - Setup Jenkins instance on Kubertenes cluster;
 - Apply basic Instance configuration, jobs, pipelines and enhancement;
 - Isolate the human-readable configuration files and installation process/scripts;
 - Manage configuration, process and everything as code on github;
 - Automate the processes and apply them via Continuous Delivery tool/s (e.g Tekton pipeline, etc);
-- (TBD)
-
+- (TBC)
 
 ## Test Environment
+
 - Kubernetes cluster hosted on 1-node;
 - Tekton pipeline installed;
-- (TBD)
+- (TBC)
 
 ## Workouts
+
 - Easily setup Jenkins instance with initial configurations and enhancement;
 - Automate the deployment and apply it via Tekton pipeline;
-
+- Clicking **ONE-Button** can rebuild your Jenkins environment with configurations; ![ONE-Button to deploy](./images/jenkins-easc-tekton.PNG)
