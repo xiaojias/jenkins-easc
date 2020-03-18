@@ -3,3 +3,9 @@ jenkins:
   numExecutors: 5
   scmCheckoutRetryCount: 2
   mode: NORMAL
+  views:
+  - all:
+      name: 'all'
+
+    
+
