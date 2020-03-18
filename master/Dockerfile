@@ -19,7 +19,7 @@ RUN /usr/local/bin/install-plugins.sh simple-theme-plugin
 # Scaling
 
 COPY plugins.txt /plugins.txt
-RUN /usr/local/bin/install-plugins.sh /plugins.txt
+RUN /usr/local/bin/install-plugins.sh < /plugins.txt
 
 VOLUME /var/jenkins_home
 
