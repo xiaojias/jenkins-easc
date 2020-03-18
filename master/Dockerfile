@@ -18,8 +18,8 @@ ENV JAVA_OPTS=-Djenkins.install.runSetupWizard=false
 # RUN /usr/local/bin/install-plugins.sh simple-theme-plugin
 # # Scaling
 
-COPY plugins.txt /plugins.txt
-RUN /usr/local/bin/install-plugins.sh < /plugins.txt
+COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 VOLUME /var/jenkins_home
 
