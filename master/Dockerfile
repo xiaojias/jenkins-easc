@@ -17,19 +17,9 @@ RUN /usr/local/bin/install-plugins.sh greenballs
 
 RUN /usr/local/bin/install-plugins.sh simple-theme-plugin
 # Scaling
-RUN /usr/local/bin/install-plugins.sh \
-  kubernetes \
-  blueocean \
-  job-dsl \
-  cloudbees-folder \
-  workflow-aggregator \
-  pipeline-utility-steps \
-  generic-webhook-trigger \
-  git-changelog \
-  configuration-as-code \
-  configuration-as-code-support \
-  violation-comments-to-gitlab \
-  next-build-number
+
+COPY plugins.txt /plugins.txt
+RUN /usr/local/bin/install-plugins.sh /plugins.txt
 
 VOLUME /var/jenkins_home
 
