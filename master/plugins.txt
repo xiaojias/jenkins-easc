@@ -14,7 +14,6 @@ bitbucket
 blueocean
 bouncycastle-api
 branch-api
-build-flow-plugin
 build-flow-test-aggregator
 build-metrics
 build-name-setter
@@ -45,7 +44,6 @@ docker-workflow
 downstream-buildview
 dropdown-viewstabbar-plugin
 durable-task
-dynamicparameter
 email-ext
 embeddable-build-status
 emma
@@ -145,7 +143,6 @@ run-condition
 scm-api
 scriptler
 script-security
-scripttrigger
 short-workspace-path
 simple-theme-plugin
 sonar
