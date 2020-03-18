@@ -75,8 +75,6 @@ icon-shim
 ivy
 jacoco
 jaxb
-jenkins-jira-issue-updater
-jenkins-jira-plugin
 jenkins-multijob-plugin
 jira-ext
 jira
