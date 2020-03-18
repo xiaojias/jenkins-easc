@@ -180,6 +180,10 @@ ws-cleanup:0.32
 xunit:2.3.1
 zentimestamp:4.2
 javadoc:1.4
+ssh-slaves
+git
+greenballs
+simple-theme-plugin
 kubernetes
 blueocean
 job-dsl

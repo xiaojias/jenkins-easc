@@ -6,17 +6,17 @@ ENV CASC_JENKINS_CONFIG=/var/jenkins_config
 
 ENV JAVA_OPTS=-Djenkins.install.runSetupWizard=false
 
-# Distributed Builds plugins
-RUN /usr/local/bin/install-plugins.sh ssh-slaves
+# # Distributed Builds plugins
+# RUN /usr/local/bin/install-plugins.sh ssh-slaves
 
-#Install GIT
-RUN /usr/local/bin/install-plugins.sh git
+# #Install GIT
+# RUN /usr/local/bin/install-plugins.sh git
 
-# UI
-RUN /usr/local/bin/install-plugins.sh greenballs
+# # UI
+# RUN /usr/local/bin/install-plugins.sh greenballs
 
-RUN /usr/local/bin/install-plugins.sh simple-theme-plugin
-# Scaling
+# RUN /usr/local/bin/install-plugins.sh simple-theme-plugin
+# # Scaling
 
 COPY plugins.txt /plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /plugins.txt
