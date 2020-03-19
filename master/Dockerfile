@@ -17,7 +17,9 @@ RUN /usr/local/bin/install-plugins.sh ant:1.11
 
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 COPY setup-plugins.sh /usr/share/jenkins/ref/setup-plugins.sh
-CMD [ "executable", '/usr/share/jenkins/ref/setup-plugins.sh', '/usr/share/jenkins/ref/plugins.txt']
+RUN chmod +x /usr/share/jenkins/ref/setup-plugins.sh
+
+RUN ["/usr/share/jenkins/ref/setup-plugins.sh", "/usr/share/jenkins/ref/plugins.txt"]
 
 # RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
