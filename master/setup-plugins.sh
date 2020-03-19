@@ -1,4 +1,3 @@
-!#/bin/sh
 # Install all plugins and the dependencies from a list file
 for item in `cat $1`
 do
