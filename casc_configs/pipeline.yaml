@@ -42,7 +42,7 @@ jobs:
   - script: >
       pipelineJob('Initial-Jobs/seed') {
         definition {
-          definition("Periodically run to seed Pipelines")
+          description("Periodically run to seed Pipelines")
           cpsScm {
             scm {
               git {
