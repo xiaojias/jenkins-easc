@@ -16,6 +16,11 @@ properties([
 ])
 
 node(){
+
+    triggers {
+        cron('H 5/* * * *')
+    }
+
     stage("Clone codes"){
         deleteDir()	
         println "Jenkins worker os is unix: ${isUnix()}"
@@ -23,7 +28,7 @@ node(){
         checkout([$class: 'GitSCM', 
                 branches: [[name: "${params.branch_name}"]], 
                 userRemoteConfigs: [[url: "${source_git}"]]]
-                )        
+        )        
     }
 
     stage('Seed Jobs'){

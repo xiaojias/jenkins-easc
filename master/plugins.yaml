@@ -58,7 +58,7 @@ generic-webhook-trigger
 # git
 git-changelog
 # git-client
-# git-parameter
+git-parameter
 # git-server
 # global-build-stats
 # gradle
