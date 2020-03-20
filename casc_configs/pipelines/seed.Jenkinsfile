@@ -1,6 +1,8 @@
 // Create Pipelines from DSL files
 
 def source_git = 'https://github.com/xiaojias/jenkins-easc.git'
+def source_git_test = 'https://github.com/xiaojias/python.git'
+
 
 properties([
     buildDiscarder(
@@ -10,15 +12,31 @@ properties([
             name: 'branch_name',
             description: 'Branch Name ( or TAG name)',
             type: 'PT_BRANCH_TAG',
-            userRemoteConfigs: [[url: "${source_git}"]]
-        )
+            defaultValue: 'master'
+        ),
+        gitParameter(
+            name: 'branch_name_test',
+            description: 'Branch Name ( or TAG name) for test',
+            type: 'PT_BRANCH_TAG',
+            defaultValue: 'master'
+        )        
     ])
 ])
 
 node(){
 
-    triggers {
-        cron('H 5/* * * *')
+    // triggers {
+    //     cron('H 5/* * * *')
+    // }
+
+    stage("Clone codes for test"){
+        deleteDir()	
+        println "Jenkins worker os is unix: ${isUnix()}"
+
+        checkout([$class: 'GitSCM', 
+                branches: [[name: "${params.branch_name_test}"]], 
+                userRemoteConfigs: [[url: "${source_git_test}"]]]
+        )        
     }
 
     stage("Clone codes"){
