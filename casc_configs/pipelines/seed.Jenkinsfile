@@ -15,7 +15,7 @@ properties([
     ])
 ])
 
-node('linux-x86_64'){
+node(){
     stage("Clone codes"){
         deleteDir()	
         println "Jenkins worker os is unix: ${isUnix()}"
@@ -29,7 +29,7 @@ node('linux-x86_64'){
     stage('Seed Jobs'){
         println "Seed jobs from all .dsl files"
 
-        jobDsl ingoreMissingFiles: true, removedJobAction: 'DISABLE', sandbox: true,
+        jobDsl removedJobAction: 'DISABLE', sandbox: true,
             targets: """
                 casc_configs/jobs/*.dsl
             """
