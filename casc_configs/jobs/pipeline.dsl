@@ -1,9 +1,9 @@
-listView('job-dsl-plugin-dsl') {
-    description('All new jobs for Job DSL')
+listView('App01') {
+    description('Pipelines for Application 01')
     filterBuildQueue()
     filterExecutors()
     jobs {
-        regex(/job-dsl-plugin.+/)
+        regex(/app01_.+/)
         name('example')
     }
     columns {
@@ -17,17 +17,17 @@ listView('job-dsl-plugin-dsl') {
     }
 }
 
-pipelineJob('job-dsl-plugin-app01-dsl') {
+pipelineJob('app01_pipeline01') {
     definition {
         cpsScm {
             scm {
                 git {
                     remote {
-                        url('git@github.com:xiaojias/devops-cicd.git')
+                        url('git@github.com:xiaojias/jenkins-easc.git')
                         credentials('credential-github-xiaojias')
                     }
                     branch('*/wip')
-                    scriptPath('app01.Jenkinsfile')
+                    scriptPath('app01_pipeline01.Jenkinsfile')
                 }
             }
         lightweight()
@@ -35,17 +35,17 @@ pipelineJob('job-dsl-plugin-app01-dsl') {
     }
 }
 
-pipelineJob('job-dsl-plugin-app02-dsl') {
+pipelineJob('app01_pipeline02') {
     definition {
         cpsScm {
             scm {
                 git {
                     remote {
-                        url('git@github.com:xiaojias/devops-cicd.git')
+                        url('git@github.com:xiaojias/jenkins-easc.git')
                         credentials('credential-github-xiaojias')
                     }
                     branch('*/wip')
-                    scriptPath('app02.Jenkinsfile')
+                    scriptPath('app01_pipeline02.Jenkinsfile')
                 }
             }
         lightweight()
