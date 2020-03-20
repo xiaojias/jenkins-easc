@@ -50,7 +50,7 @@ jobs:
                   credentials('credential-github-xiaojias')
                 }
                 branch('*/wip')
-                scriptPath('seed.Jenkinsfile')
+                scriptPath('casc_configs/pipelines/seed.Jenkinsfile')
               }
             }
             lightweight()

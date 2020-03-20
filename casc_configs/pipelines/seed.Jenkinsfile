@@ -9,7 +9,7 @@ properties([
         gitParameter(
             name: 'branch_name',
             description: 'Branch Name ( or TAG name)',
-            type: 'PT_BRANCH_TAG'
+            type: 'PT_BRANCH_TAG',
             userRemoteConfigs: [[url: "${source_git}"]]
         )
     ])
