@@ -6,7 +6,7 @@
 # antisamy-markup-formatter
 # apache-httpcomponents-client-4-api
 # artifactdeployer
-artifactory
+# artifactory
 # audit-trail
 # authentication-tokens
 # badge
@@ -21,7 +21,7 @@ blueocean
 # built-on-column
 # change-assembly-version-plugin
 # cloudbees-bitbucket-branch-source
-cloudbees-folder
+# cloudbees-folder
 # collapsing-console-sections
 # command-launcher
 # compress-artifacts
@@ -97,20 +97,20 @@ kubernetes
 # mask-passwords
 # matrix-auth
 # matrix-project
-maven-plugin
+# maven-plugin
 # mercurial
 # modernstatus
 # momentjs
 # monitoring
-msbuild
-mstest
+# msbuild
+# mstest
 # mstestrunner
 # multiple-scms
 next-build-number
 # nodejs
 # nodelabelparameter
-nuget
-nunit
+# nuget
+# nunit
 # pam-auth
 # parameterized-scheduler
 # parameterized-trigger
@@ -160,8 +160,8 @@ powershell
 # update-sites-manager
 # versionnumber
 # view-job-filters
-violation-comments-to-gitlab
-vstestrunner
+# violation-comments-to-gitlab
+# vstestrunner
 # windows-slaves
 workflow-aggregator
 # workflow-api
