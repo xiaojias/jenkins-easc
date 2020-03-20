@@ -38,3 +38,23 @@ jobs:
           }
         }
       }
+
+  - script: >
+      pipelineJob('Initial-Jobs/seed') {
+        definition {
+          description("Periodically run to seed Pipelines")
+          cpsScm {
+            scm {
+              git {
+                remote {
+                  url('git@github.com:xiaojias/jenkins-easc.git')
+                  credentials('credential-github-xiaojias')
+                }
+                branch('*/wip')
+                scriptPath('casc_configs/pipelines/seed.Jenkinsfile')
+              }
+            }
+            lightweight()
+          }
+        }
+      }

@@ -14,14 +14,14 @@
 blueocean
 # bouncycastle-api
 # branch-api
-# build-metrics
+build-metrics
 # build-name-setter
 # build-time-blame
 # build-timeout
 # built-on-column
 # change-assembly-version-plugin
 # cloudbees-bitbucket-branch-source
-# cloudbees-folder
+cloudbees-folder
 # collapsing-console-sections
 # command-launcher
 # compress-artifacts
@@ -36,7 +36,7 @@ copyartifact
 # credentials
 # credentials-binding
 # crowd2
-# dashboard-view
+dashboard-view
 # display-url-api
 # docker-commons
 # docker-workflow
@@ -55,11 +55,11 @@ copyartifact
 # file-operations
 # fstrigger
 generic-webhook-trigger
-# git
+git
 git-changelog
-# git-client
-# git-parameter
-# git-server
+git-client
+git-parameter
+git-server
 # global-build-stats
 # gradle
 # greenballs
@@ -76,7 +76,7 @@ git-changelog
 # jacoco
 # javadoc
 # jaxb
-# jenkins-multijob-plugin
+jenkins-multijob-plugin
 # jira
 # jira-ext
 # JiraTestResultReporter
@@ -105,7 +105,7 @@ kubernetes
 # msbuild
 # mstest
 # mstestrunner
-# multiple-scms
+multiple-scms
 next-build-number
 # nodejs
 # nodelabelparameter
@@ -114,18 +114,18 @@ next-build-number
 # pam-auth
 # parameterized-scheduler
 # parameterized-trigger
-# pipeline-build-step
-# pipeline-graph-analysis
-# pipeline-input-step
-# pipeline-milestone-step
-# pipeline-model-api
-# pipeline-model-declarative-agent
-# pipeline-model-definition
-# pipeline-multibranch-defaults
-# pipeline-rest-api
-# pipeline-stage-step
-# pipeline-stage-tags-metadata
-# pipeline-stage-view
+pipeline-build-step
+pipeline-graph-analysis
+pipeline-input-step
+pipeline-milestone-step
+pipeline-model-api
+pipeline-model-declarative-agent
+pipeline-model-definition
+pipeline-multibranch-defaults
+pipeline-rest-api
+pipeline-stage-step
+pipeline-stage-tags-metadata
+pipeline-stage-view
 pipeline-utility-steps
 # plain-credentials
 # plugin-usage-plugin
@@ -159,7 +159,7 @@ powershell
 # token-macro
 # update-sites-manager
 # versionnumber
-# view-job-filters
+view-job-filters
 # violation-comments-to-gitlab
 # vstestrunner
 # windows-slaves
