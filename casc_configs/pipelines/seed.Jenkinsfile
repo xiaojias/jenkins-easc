@@ -24,9 +24,9 @@ properties([
 
 node(){
 
-    // triggers {
-    //     cron('H 5/* * * *')
-    // }
+    triggers {
+        cron('H 5/* * * *')
+    }
 
     stage("Clone codes from Testing Repository"){
         deleteDir()	
