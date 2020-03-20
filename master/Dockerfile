@@ -1,9 +1,9 @@
 FROM jenkins/jenkins:lts
 
-COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+COPY plugins.yaml /usr/share/jenkins/ref/plugins.yaml
 COPY setup-plugins.sh /usr/share/jenkins/ref/setup-plugins.sh
 
-RUN /usr/share/jenkins/ref/setup-plugins.sh /usr/share/jenkins/ref/plugins.txt
+RUN /usr/share/jenkins/ref/setup-plugins.sh /usr/share/jenkins/ref/plugins.yaml
 
 # Add for Configuration as Code plugin
 # configMap of 'jenkins-configuration-as-code' is required to be create
