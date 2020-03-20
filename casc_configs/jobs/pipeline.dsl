@@ -18,7 +18,7 @@ listView('App01') {
 }
 
 pipelineJob('app01_pipeline01') {
-    definition {
+    definition("Pipeline 01 for Application: app01") {
         cpsScm {
             scm {
                 git {
@@ -36,7 +36,7 @@ pipelineJob('app01_pipeline01') {
 }
 
 pipelineJob('app01_pipeline02') {
-    definition {
+    definition("Pipeline 02 for Application: app01") {
         cpsScm {
             scm {
                 git {
