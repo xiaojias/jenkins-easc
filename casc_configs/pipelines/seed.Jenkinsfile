@@ -1,25 +1,24 @@
 // Create Pipelines from DSL files
 
-def source_git = 'https://github.com/xiaojias/jenkins-easc.git'
 def source_git_test = 'https://github.com/xiaojias/python.git'
-
+def source_git = 'https://github.com/xiaojias/jenkins-easc.git'
 
 properties([
     buildDiscarder(
         logRotator(artifactDaysToKeepStr: '10', artifactNumToKeepStr: '10', daysToKeepStr: '10', numToKeepStr: '20')),
     parameters([
         gitParameter(
-            name: 'branch_name',
-            description: 'Branch Name ( or TAG name)',
+            name: 'branch_name_test',
+            description: 'Testing Repository - Branch Name ( or TAG name)',
             type: 'PT_BRANCH_TAG',
             defaultValue: 'master'
         ),
         gitParameter(
-            name: 'branch_name_test',
-            description: 'Branch Name ( or TAG name) for test',
+            name: 'branch_name',
+            description: 'Branch Name ( or TAG name)',
             type: 'PT_BRANCH_TAG',
-            defaultValue: 'master'
-        )        
+            defaultValue: 'wip'
+        )
     ])
 ])
 
@@ -29,7 +28,7 @@ node(){
     //     cron('H 5/* * * *')
     // }
 
-    stage("Clone codes for test"){
+    stage("Clone codes from Testing Repository"){
         deleteDir()	
         println "Jenkins worker os is unix: ${isUnix()}"
 
@@ -39,7 +38,7 @@ node(){
         )        
     }
 
-    stage("Clone codes"){
+    stage("Seed Jobs"){
         deleteDir()	
         println "Jenkins worker os is unix: ${isUnix()}"
 
@@ -47,9 +46,7 @@ node(){
                 branches: [[name: "${params.branch_name}"]], 
                 userRemoteConfigs: [[url: "${source_git}"]]]
         )        
-    }
 
-    stage('Seed Jobs'){
         println "Seed jobs from all .dsl files"
 
         jobDsl removedJobAction: 'DISABLE', sandbox: true,
