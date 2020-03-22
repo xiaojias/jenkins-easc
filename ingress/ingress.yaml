@@ -3,26 +3,25 @@ kind: Ingress
 metadata:
   labels:
     app: jenkins-master
-    version: latest
+    version: 1.0.0
     group: jenkins
   namespace: jenkins
   name: jenkins-ingress
   annotations:
-#    nginx.ingress.kubernetes.io/auth-type: basic
-#    nginx.ingress.kubernetes.io/auth-secret: basic-auth
-#    nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required - user'
+    #    nginx.ingress.kubernetes.io/auth-type: basic
+    #    nginx.ingress.kubernetes.io/auth-secret: basic-auth
+    #    nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required - user'
     ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: jenkins.xiaojias.com
-    http:
-      paths:
-        - path: /apple
-          backend:
-            serviceName: apple-service
-            servicePort: 5678
-        - path: /
-          backend:
-            serviceName: jenkins-master
-            servicePort: 8080
-
+    - host: jenkins.xiaojias.com
+      http:
+        paths:
+          - path: /apple
+            backend:
+              serviceName: apple-service
+              servicePort: 5678
+          - path: /
+            backend:
+              serviceName: jenkins-master
+              servicePort: 8080
