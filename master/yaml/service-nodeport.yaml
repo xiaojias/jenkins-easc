@@ -3,23 +3,24 @@ kind: "Service"
 metadata:
   labels:
     app: "jenkins-master"
-    version: "latest"
+    version: "1.0.0"
     group: "jenkins"
   namespace: "jenkins"
   name: "jenkins-master-nodeport"
 spec:
   ports:
-  - name: "http"
-    port: 80
-    targetPort: 8080
-    nodePort: 31090
-  - name: "jnlp"
-    port: 50000
-    targetPort: 50000
-    nodePort: 31091
+    - name: "http"
+      port: 80
+      targetPort: 8080
+      nodePort: 31090
+    - name: "jnlp"
+      port: 50000
+      targetPort: 50000
+      nodePort: 31091
   selector:
     app: "jenkins-master"
-    version: "latest"
+    version: "1.0.0"
     group: "jenkins"
   type: "NodePort"
 ---
+
