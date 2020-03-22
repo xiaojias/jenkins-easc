@@ -1,3 +1,9 @@
+- [Environments](#Environments)
+- [Progress](#Progress)
+  - [Phase 1](#Phase-1)
+  - [Phase 2](#Phase-2)
+  - [Phase 3](#Phase-3)
+
 # Environments
 
 - Kubernetes cluster is setup in one node;
@@ -84,7 +90,9 @@ kubectl apply -f master/service-nodeport.yaml
 
 **Success.**
 
-## Phase 3 (on going)
+## Phase 3
+
+**(on going)**
 
 **Goals**
 

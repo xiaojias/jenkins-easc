@@ -1,5 +1,9 @@
 # Make Jenkins Everything as Code
 
+- [Goals](#Goals)
+- [Test Environment](#Test-Environment)
+- [Work out](#Work-out)
+
 ## Goals
 
 - Setup Jenkins instance on Kubertenes cluster;
@@ -16,7 +20,7 @@
 - Tekton pipeline installed;
 - (TBC)
 
-## Workouts
+## Work out
 
 - Easily setup Jenkins instance with initial configurations and enhancement; ![Deployed Instance](./images/jenkins-easc-02.PNG)
 - Automate the deployment and apply it via Tekton pipeline;
