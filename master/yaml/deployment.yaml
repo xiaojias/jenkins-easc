@@ -5,27 +5,27 @@ metadata:
   name: "jenkins-master"
   labels:
     app: jenkins-master
-    version: "latest"
+    version: "1.0.0"
     group: "jenkins"
   namespace: "jenkins"
 spec:
   replicas: 1
   selector:
-      matchLabels:
-        app: "jenkins-master"
-        version: "latest"
-        group: "jenkins"
+    matchLabels:
+      app: "jenkins-master"
+      version: "1.0.0"
+      group: "jenkins"
   template:
     metadata:
       labels:
         app: jenkins-master
-        version: "latest"
+        version: "1.0.0"
         group: "jenkins"
     spec:
       serviceAccount: "jenkins-admin"
       containers:
         - name: "jenkins-master"
-          image: "richardx/jenkins-master:latest"
+          image: "richardx/jenkins-master:1.0.0"
           imagePullPolicy: "IfNotPresent"
           env:
             - name: JAVA_OPTS
@@ -39,7 +39,7 @@ spec:
             - name: jenkins-home
               mountPath: "/var/jenkins_home"
             - name: jenkins-configuration-as-code
-              mountPath: "/var/jenkins_config"              
+              mountPath: "/var/jenkins_config"
           livenessProbe:
             httpGet:
               path: /login
@@ -51,14 +51,13 @@ spec:
               path: /login
               port: 8080
             initialDelaySeconds: 60
-            timeoutSeconds: 5 
+            timeoutSeconds: 5
       volumes:
         - name: jenkins-home
-#          emptyDir: {}
+          #          emptyDir: {}
           persistentVolumeClaim:
             claimName: "jenkins-pvc"
             readOnly: false
         - name: jenkins-configuration-as-code
           configMap:
             name: jenkins-configuration-as-code
-           
