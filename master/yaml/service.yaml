@@ -3,20 +3,21 @@ kind: "Service"
 metadata:
   labels:
     app: "jenkins-master"
-    version: "latest"
+    version: "1.0.0"
     group: "jenkins"
   namespace: "jenkins"
   name: "jenkins-master"
 spec:
   ports:
-  - name: "http"
-    port: 8080
-    targetPort: 8080
-  - name: "jnlp"
-    port: 50000
-    targetPort: 50000
+    - name: "http"
+      port: 8080
+      targetPort: 8080
+    - name: "jnlp"
+      port: 50000
+      targetPort: 50000
   selector:
     app: "jenkins-master"
-    version: "latest"
+    version: "1.0.0"
     group: "jenkins"
 ---
+
