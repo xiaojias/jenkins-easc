@@ -5,7 +5,7 @@ jenkins:
         serverUrl: "https://kubernetes.default.svc.cluster.local:443"
         skipTlsVerify: true
         namespace: "jenkins"
-        jenkinsUrl: "http://jenkins-master.jenkins:8080"
+        jenkinsUrl: "http://jenkins-master.test:8080"
         containerCapStr: 100
         templates:
           - name: jenkins-slave-maven
