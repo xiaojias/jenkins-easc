@@ -1,4 +1,4 @@
-# Make Jenkins Everything as Code
+# Make Jenkins Everything as a Code
 
 - [Goals](#Goals)
 - [Test Environment](#Test-Environment)
