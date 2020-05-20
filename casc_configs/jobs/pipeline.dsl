@@ -43,11 +43,11 @@ pipelineJob('app01_pipeline02') {
             scm {
                 git {
                     remote {
-                        url('git@github.com:xiaojias/jenkins-easc.git')
+                        url('git@github.com:xiaojias/devops-cicd.git')
                         credentials('credential-github-xiaojias')
                     }
-                    branch('*/wip')
-                    scriptPath('app01_pipeline02.Jenkinsfile')
+                    branch('*/pipeline_std')
+                    scriptPath('pipeline_std/templates/app01_pipeline02.Jenkinsfile')
                 }
             }
         lightweight()
